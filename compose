@@ -5,7 +5,7 @@ case $1 in
     podman-compose -f podman-compose.yml up -d
     ;;
   down)
-    podman-compose -f podman-compose.yml down
+    podman-compose -f podman-compose.yml down --timeout=3
     ;;
   *)
 esac
