@@ -19,7 +19,8 @@ RUN apt update && apt install -y \
     libopenal-dev \
     unzip \
     && rm -rf /var/lib/apt/lists/* \
-    && pip install cpplint --break-system-packages
+    && pip install cpplint --break-system-packages \
+    && pip install PyYAML --break-system-packages
 
 WORKDIR /comp4-grading
 
