@@ -12,6 +12,11 @@ RUN apt update && apt install -y \
     nano \
     python3 \
     python3-pip \
+    pulseaudio-utils \
+    libogg-dev \
+    libvorbis-dev \
+    libflac-dev \
+    libopenal-dev \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /comp4-grading

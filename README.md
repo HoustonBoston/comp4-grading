@@ -1,12 +1,13 @@
 # Purpose
-This is to make my life easier grading other students' work. Containers are powerful because they offer isolation. Any risky packages can cause headaches down the line, so an isolated environment is needed. The best part is the container is running the GUI application! Took me a while to figure that one out with ChatGPT!!!
+This is to make my life easier grading other students' work. Containers are powerful because they offer isolation. Any risky packages can cause headaches down the line, so an isolated environment is needed. The best part is the container is running the GUI application AND playing audio! Took me a while to figure these out with ChatGPT!!!
 
 # Dependencies needed:
-podman, podman-compose, SFML3.0
+podman, podman-compose, SFML3.0, pulseaudio-utils
+pulseaudio-utils is so the host can get a pulse directory mounted.
 
 ## Installation:
 ``` sudo apt update
-    sudo apt install podman podman-compose
+    sudo apt install podman podman-compose pulseaudio-utils
 ```
 
 ## Installation for SFML:

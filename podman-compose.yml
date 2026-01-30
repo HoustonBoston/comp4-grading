@@ -10,11 +10,13 @@ services:
       - XAUTHORITY=/tmp/.Xauthority
       - WAYLAND_DISPLAY=wayland-0
       - XDG_RUNTIME_DIR=/run/user/1000
+      - PULSE_SERVER=unix:/tmp/pulse
     
-    # X11 socket and data volume
+    # X11 socket, data volume, and PulseAudio socket
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
       - sfml-data:/data
+      - /run/user/1000/pulse/native:/tmp/pulse
     
     # GPU
     devices:
