@@ -1,0 +1,25 @@
+version: "3.9"
+services:
+  gui-app:
+    build: .
+    container_name: sfml-gui
+
+    environment:
+      - DISPLAY=${DISPLAY}
+      - XAUTHORITY=/tmp/.Xauthority
+      - WAYLAND_DISPLAY=wayland-0
+      - XDG_RUNTIME_DIR=/run/user/1000
+    
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - sfml-data:/data
+    
+    devices:
+      - /dev/dri:/dev/dri
+
+    network_mode: "host"
+    tty: true
+  
+volumes:
+  sfml-data:
+    driver: local

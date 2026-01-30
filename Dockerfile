@@ -10,6 +10,7 @@ RUN apt update && apt install -y \
     libgl1-mesa-dev \
     libx11-dev \
     libglu1-mesa-dev \
+    nano
 
 COPY . /
 
