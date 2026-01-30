@@ -18,6 +18,7 @@ RUN apt update && apt install -y \
     libflac-dev \
     libopenal-dev \
     && rm -rf /var/lib/apt/lists/*
+    && pip install cpplint
 
 WORKDIR /comp4-grading
 
