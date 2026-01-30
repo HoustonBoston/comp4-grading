@@ -11,10 +11,12 @@ services:
       - WAYLAND_DISPLAY=wayland-0
       - XDG_RUNTIME_DIR=/run/user/1000
     
+    # X11 socket and data volume
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
       - sfml-data:/data
     
+    # GPU
     devices:
       - /dev/dri:/dev/dri
 
