@@ -19,7 +19,7 @@ RUN apt update && apt install -y \
     libopenal-dev \
     unzip \
     && rm -rf /var/lib/apt/lists/* \
-    && pip install cpplint
+    && pip install cpplint --break-system-packages
 
 WORKDIR /comp4-grading
 
