@@ -1,7 +1,5 @@
 #!/bin/bash
 
-podman-compose 
-
 case $1 in
   up)
     podman-compose -f podman-compose.yml up -d
