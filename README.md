@@ -1,5 +1,5 @@
 # Purpose
-This is to make my life easier grading other students' work. Containers are powerful because they offer isolation. Any risky packages can cause headaches down the line, so an isolated environment is needed.
+This is to make my life easier grading other students' work. Containers are powerful because they offer isolation. Any risky packages can cause headaches down the line, so an isolated environment is needed. The best part is the container is running the GUI application! Took me a while to figure that one out with ChatGPT!!!
 
 # Dependencies needed:
 podman, podman-compose, SFML3.0
