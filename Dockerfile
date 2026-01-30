@@ -9,6 +9,9 @@ RUN apt update && apt install -y \
     libgl1-mesa-dev \
     libx11-dev \
     libglu1-mesa-dev \
+    libxrandr-dev \
+    libxcursor-dev \
+    libxi-dev \
     nano \
     python3 \
     python3-pip \
@@ -17,6 +20,7 @@ RUN apt update && apt install -y \
     libvorbis-dev \
     libflac-dev \
     libopenal-dev \
+    libboost-all-dev \
     unzip \
     && rm -rf /var/lib/apt/lists/* \
     && pip install cpplint --break-system-packages \

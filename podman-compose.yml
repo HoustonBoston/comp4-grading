@@ -15,7 +15,7 @@ services:
     # X11 socket, data volume, and PulseAudio socket
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
-      - sfml-data:/data
+      - sfml-data:/comp4-grading
       - /run/user/1000/pulse/native:/tmp/pulse
     
     # GPU
