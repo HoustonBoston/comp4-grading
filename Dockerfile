@@ -17,6 +17,7 @@ RUN apt update && apt install -y \
     libvorbis-dev \
     libflac-dev \
     libopenal-dev \
+    unzip \
     && rm -rf /var/lib/apt/lists/*
     && pip install cpplint
 
