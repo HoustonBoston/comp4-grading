@@ -1,2 +1,4 @@
-Dockerfile
-podman-compose.yml
+# Ignore everything
+*
+# Allow SFML-3.0.2/
+!./SFML-3.0.2/
