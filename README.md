@@ -13,3 +13,6 @@ podman, podman-compose, SFML3.0
 Visit this link: https://www.sfml-dev.org/download/sfml/3.0.2/
 
 and download GCC- Linux 64-bit, and put it in the directory where all Dockerfiles and podman-compose files exist for this project.
+
+# Using Podman
+First run ```podman build -t sfml-gui .```, wait for it to build, and then run ```docker-compose up -d```, and then ```./exec.sh``` to get inside of the container to run shell commands.
