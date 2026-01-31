@@ -18,4 +18,4 @@ and download GCC- Linux 64-bit, and put it in the directory where all Dockerfile
 Then you want to extract it by running ```tar -xvf <filename>.tar.gz```
 
 # Using Podman
-First run ```podman build -t sfml-gui .```, wait for it to build, and then run ```docker-compose up -d```, and then ```./exec.sh``` to get inside of the container to run shell commands.
+First run ```podman build -t sfml-gui .```, wait for it to build, and then run ```./compose up```, and then ```./exec.sh``` to get inside of the container to run shell commands.
