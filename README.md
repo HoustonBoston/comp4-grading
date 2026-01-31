@@ -7,7 +7,7 @@ From what I understand, the host pulseaudio is running and listening on a unix s
 podman, podman-compose, SFML3.0, pulseaudio-utils
 pulseaudio-utils is so the host can get a pulse directory mounted.
 
-## Installation:
+## Installation on the host:
 ``` sudo apt update
     sudo apt install podman podman-compose pulseaudio-utils
 ```
@@ -19,3 +19,6 @@ Then you want to extract it by running ```tar -xvf <filename>.tar.gz```
 
 # Using Podman
 First run ```podman build -t sfml-gui .```, wait for it to build, and then run ```./compose up```, and then ```./exec.sh``` to get inside of the container to run shell commands.
+
+## Copying files/dirs over to container
+Run ```podman cp /path/to/file container_name:/path/to/dest```
