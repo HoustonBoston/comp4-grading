@@ -22,7 +22,9 @@ and download GCC- Linux 64-bit, and put it in the directory where all Dockerfile
 Then you want to extract it by running ```tar -xvf <filename>.tar.gz```
 
 # Using Podman
-First run ```./podman-vol-create.sh```, then ```./build```, wait for it to build, and then run ```./compose up```, and finally ```./exec.sh``` to get inside of the container to run shell commands.
+To allow the display server to communicate, run ```xhost +localhost```
+
+Next, run ```./podman-vol-create.sh```, then ```./build```, wait for it to build, and then run ```./compose up```, and finally ```./exec.sh``` to get inside of the container to run shell commands.
 
 ## Copying files/dirs over to container
 Run ```podman cp /path/to/file container_name:/path/to/dest```
