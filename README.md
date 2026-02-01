@@ -3,11 +3,8 @@ This is to make my life easier grading other students' work. Containers are powe
 
 From what I understand, the host pulseaudio is running and listening on a unix socket, and mounting that as a volume on the container to /tmp/pulse, and when the container writes to /tmp/pulse, it plays the sound on the host machine.
 
-## Warning: 
-Use this on a Linux environment, NOT WSL! At the current state it will not work on WSL.
-
 # Dependencies needed:
-## WSL & Linux:
+## Linux:
 podman, podman-compose, SFML3.0, pulseaudio-utils
 
 pulseaudio-utils is so the host can get a pulse directory mounted.
@@ -17,10 +14,15 @@ pulseaudio-utils is so the host can get a pulse directory mounted.
     sudo apt install podman podman-compose pulseaudio-utils
 ```
 
-## For WSL:
+## If on WSL:
 ```
-sudo apt update
-sudo apt install podman podman-compose pulseaudio-utils mesa-utils libgl1-mesa-dri mesa-vulkan-drivers
+install libboost-all-dev
+
+add these to .bashrc:
+export LD_LIBRARY_PATH=~/comp4-grading/SFML-3.0.2/lib:$LD_LIBRARY_PATH
+export PKG_CONFIG_PATH=~/comp4-grading/SFML-3.0.2/lib/pkgconfig:$PKG_CONFIG_PATH
+export CPLUS_INCLUDE_PATH=~/comp4-grading/SFML-3.0.2/include:$CPLUS_INCLUDE_PATH
+export LIBRARY_PATH=~/comp4-grading/SFML-3.0.2/lib:$LIBRARY_PATH 
 ```
 
 ## Installation for SFML:
@@ -28,10 +30,10 @@ Visit this link: https://www.sfml-dev.org/download/sfml/3.0.2/
 and download GCC- Linux 64-bit, and put it in the directory where all Dockerfiles and podman-compose files exist for this project.
 Then you want to extract it by running ```tar -xvf <filename>.tar.gz```
 
-# Using Podman
+# Using Podman (Linux only)
 To allow the display server to communicate, run ```xhost +localhost```
 
 Next, run ```./podman-vol-create.sh```, then ```./build```, wait for it to build, and then run ```./compose up```, and finally ```./exec.sh``` to get inside of the container to run shell commands.
 
-## Copying files/dirs over to container
+## Copying files/dirs over to container (Linux only)
 Run ```podman cp /path/to/file container_name:/path/to/dest```
