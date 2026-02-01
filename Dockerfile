@@ -16,6 +16,7 @@ RUN apt update && apt install -y \
     python3 \
     python3-pip \
     pulseaudio-utils \
+    pulseaudio \
     libogg-dev \
     libvorbis-dev \
     libflac-dev \
