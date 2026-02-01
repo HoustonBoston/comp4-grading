@@ -8,6 +8,7 @@ Use this on a Linux environment, NOT WSL! At the current state it will not work 
 
 # Dependencies needed:
 podman, podman-compose, SFML3.0, pulseaudio-utils
+
 pulseaudio-utils is so the host can get a pulse directory mounted.
 
 ## Installation on the host:
