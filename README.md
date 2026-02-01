@@ -11,24 +11,39 @@ pulseaudio-utils is so the host can get a pulse directory mounted.
 
 ## Installation on the host Linux:
 ``` sudo apt update
-    sudo apt install podman podman-compose pulseaudio-utils
-```
-
-## If on WSL:
-```
-install libboost-all-dev
-
-add these to .bashrc:
-export LD_LIBRARY_PATH=~/comp4-grading/SFML-3.0.2/lib:$LD_LIBRARY_PATH
-export PKG_CONFIG_PATH=~/comp4-grading/SFML-3.0.2/lib/pkgconfig:$PKG_CONFIG_PATH
-export CPLUS_INCLUDE_PATH=~/comp4-grading/SFML-3.0.2/include:$CPLUS_INCLUDE_PATH
-export LIBRARY_PATH=~/comp4-grading/SFML-3.0.2/lib:$LIBRARY_PATH 
+    sudo apt install podman podman-compose pulseaudio pulseaudio-utils
 ```
 
 ## Installation for SFML:
 Visit this link: https://www.sfml-dev.org/download/sfml/3.0.2/
 and download GCC- Linux 64-bit, and put it in the directory where all Dockerfiles and podman-compose files exist for this project.
 Then you want to extract it by running ```tar -xvf <filename>.tar.gz```
+
+## If on WSL:
+SFML needs these dependencies
+```
+sudo apt update &&
+sudo apt install \
+    libxrandr-dev \
+    libxcursor-dev \
+    libxi-dev \
+    libudev-dev \
+    libfreetype-dev \
+    libflac-dev \
+    libvorbis-dev \
+    libgl1-mesa-dev \
+    libegl1-mesa-dev \
+    libboost-all-dev \
+    libfreetype-dev
+```
+
+add these to .bashrc:
+```
+export LD_LIBRARY_PATH=~/comp4-grading/SFML-3.0.2/lib:$LD_LIBRARY_PATH
+export PKG_CONFIG_PATH=~/comp4-grading/SFML-3.0.2/lib/pkgconfig:$PKG_CONFIG_PATH
+export CPLUS_INCLUDE_PATH=~/comp4-grading/SFML-3.0.2/include:$CPLUS_INCLUDE_PATH
+export LIBRARY_PATH=~/comp4-grading/SFML-3.0.2/lib:$LIBRARY_PATH 
+```
 
 # Using Podman (Linux only)
 To allow the display server to communicate, run ```xhost +localhost```
