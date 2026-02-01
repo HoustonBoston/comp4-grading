@@ -3,6 +3,9 @@ This is to make my life easier grading other students' work. Containers are powe
 
 From what I understand, the host pulseaudio is running and listening on a unix socket, and mounting that as a volume on the container to /tmp/pulse, and when the container writes to /tmp/pulse, it plays the sound on the host machine.
 
+## Warning: 
+Use this on a Linux environment, NOT WSL! At the current state it will not work on WSL.
+
 # Dependencies needed:
 podman, podman-compose, SFML3.0, pulseaudio-utils
 pulseaudio-utils is so the host can get a pulse directory mounted.
