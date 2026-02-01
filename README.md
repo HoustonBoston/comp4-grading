@@ -7,13 +7,20 @@ From what I understand, the host pulseaudio is running and listening on a unix s
 Use this on a Linux environment, NOT WSL! At the current state it will not work on WSL.
 
 # Dependencies needed:
+## WSL & Linux:
 podman, podman-compose, SFML3.0, pulseaudio-utils
 
 pulseaudio-utils is so the host can get a pulse directory mounted.
 
-## Installation on the host:
+## Installation on the host Linux:
 ``` sudo apt update
     sudo apt install podman podman-compose pulseaudio-utils
+```
+
+## For WSL:
+```
+sudo apt update
+sudo apt install podman podman-compose pulseaudio-utils mesa-utils libgl1-mesa-dri mesa-vulkan-drivers
 ```
 
 ## Installation for SFML:
