@@ -16,13 +16,13 @@ services:
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
       - sfml-data:/comp4-grading
-      - /run/user/1000/pulse/native:/tmp/pulse  
+      - /run/user/1000/pulse/native:/tmp/pulse
       # - ${XAUTHORITY}:${XAUTHORITY}:ro          # <------ Uncomment if on Linux with X11 or Wayland with XWayland  
     
     # GPU
     devices:
       # - /dev/dri:/dev/dri    <------ Uncomment if on Linux                    
-      - /dev/dxg:/dev/dri      # <------ Uncomment if on Windows with WSLg
+      - /dev/dxg:/dev/dri      # <------ Uncomment if on Windows with WSL
 
     network_mode: "host"
     tty: true
