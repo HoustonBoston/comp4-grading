@@ -50,11 +50,11 @@ export LIBRARY_PATH=~/comp4-grading/SFML-3.0.2/lib:$LIBRARY_PATH
 # Using Podman (Linux & WSL only):
 To allow the display server to communicate, run ```xhost +localhost```
 
-Next, run ```./podman-vol-create.sh```, then ```./build```, wait for it to build, and then run ```./compose up```, and finally ```./exec.sh``` to get inside of the container to run shell commands.
+Next, run ```./podman-vol-create.sh```, then ```./build```, wait for it to build, and then run ```./compose up```, and finally ```./exec.sh``` to get inside of the container to run shell commands, and ```exit``` within the container to return to host shell.
 
 ## Copying files/dirs over to container (Linux & WSL only):
 Run ```podman cp /path/to/file container_name:/path/to/dest```
 
 ### Example: Copying over required files and directories over:
 ```podman cp SFML-3.0.2/ container_name:/comp4-grading/```
-Or, run ```./copy-sfml-lib.sh``` to automatically copy over all necessary files to container.
+Or, run ```./copy-sfml-lib.sh``` to automatically copy over all the necessary files to container.
