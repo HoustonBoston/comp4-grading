@@ -57,3 +57,4 @@ Run ```podman cp /path/to/file container_name:/path/to/dest```
 
 ### Example: Copying over required files and directories over:
 ```podman cp SFML-3.0.2/ container_name:/comp4-grading/```
+Or, run ```./copy-sfml-lib.sh``` to automatically copy over all necessary files to container.
