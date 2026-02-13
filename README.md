@@ -14,6 +14,8 @@ pulseaudio-utils is so the host can get a pulse directory mounted.
     sudo apt install podman podman-compose pulseaudio pulseaudio-utils
 ```
 
+[For WSL and Linux](#using-podman-linux--wsl-only)
+
 ## Installation for SFML:
 Visit this link: https://www.sfml-dev.org/download/sfml/3.0.2/
 and download GCC- Linux 64-bit, and put it in the directory where all Dockerfiles and podman-compose files exist for this project.
@@ -44,8 +46,6 @@ export PKG_CONFIG_PATH=~/comp4-grading/SFML-3.0.2/lib/pkgconfig:$PKG_CONFIG_PATH
 export CPLUS_INCLUDE_PATH=~/comp4-grading/SFML-3.0.2/include:$CPLUS_INCLUDE_PATH
 export LIBRARY_PATH=~/comp4-grading/SFML-3.0.2/lib:$LIBRARY_PATH 
 ```
-
-[For WSL and Linux](#using-podman-linux--wsl-only)
 
 # Using Podman (Linux & WSL only):
 To allow the display server to communicate, run ```xhost +localhost```
