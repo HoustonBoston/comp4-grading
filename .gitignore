@@ -1,4 +1,4 @@
 sound.wav
-Gradescope.pyx
-*.zip
+# Gradescope.pyx
+.zip
 SFML-*
