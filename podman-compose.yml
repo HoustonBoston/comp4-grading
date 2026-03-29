@@ -9,7 +9,7 @@ services:
       - DISPLAY=${DISPLAY}
       - XAUTHORITY=${XAUTHORITY}
       - WAYLAND_DISPLAY=${WAYLAND_DISPLAY}
-      - XDG_RUNTIME_DIR=/run/user/1000            
+      - XDG_RUNTIME_DIR=/run/user/1000
       - PULSE_SERVER=unix:/tmp/pulse
     
     # X11 socket, data volume, and PulseAudio socket
@@ -17,12 +17,12 @@ services:
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
       - sfml-data:/comp4-grading
       - /run/user/1000/pulse/native:/tmp/pulse
-      # - ${XAUTHORITY}:${XAUTHORITY}:ro          # <------ Uncomment if on Linux with X11 or Wayland with XWayland  
+      - ${XAUTHORITY}:${XAUTHORITY}:ro          # <------ Uncomment if on Linux with X11 or Wayland with XWayland  
     
     # GPU
     devices:
-      # - /dev/dri:/dev/dri    <------ Uncomment if on Linux                    
-      - /dev/dxg:/dev/dri      # <------ Uncomment if on Windows with WSL
+      - /dev/dri:/dev/dri   # <------ Uncomment if on Linux                    
+      # - /dev/dxg:/dev/dri      # <------ Uncomment if on Windows with WSL
 
     network_mode: "host"
     tty: true

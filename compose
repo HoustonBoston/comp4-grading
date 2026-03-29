@@ -1,11 +1,10 @@
 #!/bin/bash
 
 case $1 in
-  up)
-    podman-compose -f podman-compose.yml up -d
-    ;;
-  down)
+  d)
     podman-compose -f podman-compose.yml down --timeout=3
     ;;
   *)
+    podman-compose -f podman-compose.yml up -d
+    ;;
 esac
